@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: fastapi-tutorial
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiosqlite==0.21.0
+Requires-Dist: fastapi==0.118.0
+Requires-Dist: fastapi-users[sqlalchemy]==14.0.1
+Requires-Dist: imagekitio==4.2.0
+Requires-Dist: python-dotenv==1.1.1
+Requires-Dist: streamlit==1.50.0
+Requires-Dist: uvicorn[standard]==0.37.0

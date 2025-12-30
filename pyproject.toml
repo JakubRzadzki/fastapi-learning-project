@@ -1,0 +1,14 @@
+[project]
+name = "fastapi-tutorial"
+version = "0.1.0"
+description = "Aplikacja edukacyjna FastAPI z obsługą użytkowników i przesyłaniem plików."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "fastapi>=0.118.0",
+    "fastapi-users[sqlalchemy]>=14.0.1",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.50.0",
+    "uvicorn[standard]>=0.37.0",
+]
