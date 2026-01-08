@@ -5,73 +5,83 @@
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B)
 ![SQLAlchemy](https://img.shields.io/badge/ORM-SQLAlchemy-red)
 
-Prosta aplikacja typu social media (klon Instagrama) stworzona w celu nauki frameworka **FastAPI**. Projekt obsługuje pełny proces rejestracji i logowania użytkowników (JWT), przesyłanie plików (zdjęć) oraz ich wyświetlanie w formie feedu.
+A simple social media application (Instagram clone) created to learn the **FastAPI** framework. The project handles the full user registration and login process (JWT), file uploads (photos), and displaying them in a feed.
 
-## 🚀 Funkcjonalności
+## 🚀 Features
 
-### Dla Użytkownika:
-* 🔐 **Rejestracja i Logowanie:** Bezpieczne uwierzytelnianie przy użyciu JWT.
-* 📤 **Upload Zdjęć:** Przesyłanie plików graficznych z opisem.
-* 🖼️ **Feed:** Przeglądanie najnowszych postów od wszystkich użytkowników.
-* 🗑️ **Zarządzanie:** Możliwość usuwania własnych postów.
+### For the User:
+* 🔐 **Registration & Login:** Secure authentication using JWT.
+* 📤 **Photo Upload:** Uploading image files with captions.
+* 🖼️ **Feed:** Browsing the latest posts from all users.
+* 🗑️ **Management:** Ability to delete your own posts.
 
-### Technologia:
-* **Backend:** FastAPI (Asynchroniczne endpointy)
-* **Baza danych:** SQLite (dla prostoty) + SQLAlchemy (Async)
-* **Frontend:** Streamlit (Interfejs w Pythonie)
-* **Auth:** FastAPI Users (Bearear Token + JWT Strategy)
-* **Pliki:** Lokalne przechowywanie w folderze `uploads/`
+### Technology Stack:
+* **Backend:** FastAPI (Async endpoints)
+* **Database:** SQLite (for simplicity) + SQLAlchemy (Async)
+* **Frontend:** Streamlit (Python Interface)
+* **Auth:** FastAPI Users (Bearer Token + JWT Strategy)
+* **Files:** Local storage in the `uploads/` folder
 
 ---
 
-## 🛠️ Instalacja i Uruchomienie
+## 🛠️ Installation and Setup
 
-### 1. Klonowanie i środowisko
-Zaleca się użycie wirtualnego środowiska (`venv`), aby nie zaśmiecać systemu.
+1. Cloning and Environment
+It is recommended to use a virtual environment (`venv`) to keep the system clean.
 
-```bash
-# Sklonuj repozytorium (jeśli pobierasz z GH) lub wejdź do folderu
-cd nazwa-twojego-folderu
+Clone the repository (if downloading from GH) or enter the folder
+```text
+cd your-folder-name
+```
 
-# Stwórz środowisko wirtualne
+Create a virtual environment
+```text
 python -m venv .venv
+```
 
-# Aktywuj środowisko:
+Activate the environment:
+
+```text
 # Windows:
 .venv\Scripts\activate
+```
+
+```text
 # Linux/Mac:
 source .venv/bin/activate
-2. Instalacja zależności
-Bash
+```
 
-# Zainstaluj wszystkie biblioteki zdefiniowane w pyproject.toml
+2. Install Dependencies
+Install all libraries defined in pyproject.toml.
+```text
 pip install .
-3. Uruchomienie Backendu (Serwer)
-Serwer wystartuje na porcie 8000. Przy pierwszym uruchomieniu automatycznie utworzy plik bazy danych test.db oraz folder uploads.
+```
 
-Bash
-
+3. Run Backend (Server)
+The server will start on port 8000. Upon the first run, it will automatically create the test.db database file and the uploads folder.
+```text
 uvicorn src.app:app --reload
-📄 Dokumentacja API (Swagger): http://127.0.0.1:8000/docs
+```
+📄 API Documentation (Swagger): http://127.0.0.1:8000/docs
 
-4. Uruchomienie Frontendu
-W nowym oknie terminala (pamiętaj o aktywacji .venv) uruchom interfejs:
+4. Run Frontend
+In a new terminal window (remember to activate .venv there as well), launch the interface:
 
 Bash
 
 streamlit run frontend.py
-📂 Struktura Projektu
-Plaintext
 
+```text
+📂 Project Structure
 ├── src/
-│   ├── app.py       # Główny plik aplikacji, konfiguracja FastAPI i endpointy
-│   ├── db.py        # Modele bazy danych i konfiguracja SQLAlchemy
-│   ├── schemas.py   # Schematy Pydantic (walidacja danych wejścia/wyjścia)
-│   └── users.py     # Logika autentykacji i menedżer użytkowników
-├── uploads/         # Folder na przesłane zdjęcia (tworzony automatycznie)
-├── frontend.py      # Interfejs użytkownika w Streamlit
-├── pyproject.toml   # Lista zależności projektu
-└── test.db          # Plik bazy danych SQLite (tworzony automatycznie)
-
-📝 Licencja
-Projekt stworzony w celach edukacyjnych.
+│   ├── app.py       # Main application file, FastAPI config, and endpoints
+│   ├── db.py        # Database models and SQLAlchemy configuration
+│   ├── schemas.py   # Pydantic schemas (input/output data validation)
+│   └── users.py     # Authentication logic and user manager
+├── uploads/         # Folder for uploaded photos (created automatically)
+├── frontend.py      # User interface in Streamlit
+├── pyproject.toml   # Project dependencies list
+└── test.db          # SQLite database file (created automatically)
+```
+## 📝 License 
+Project created for educational purposes.
